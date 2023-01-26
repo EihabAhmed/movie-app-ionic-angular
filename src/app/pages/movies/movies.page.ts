@@ -10,7 +10,7 @@ import { environment } from 'src/environments/environment';
 })
 export class MoviesPage implements OnInit {
 
-  movies = [];
+  movies: any[] = [];
   currentPage = 1;
   imageBaseUrl = environment.images;
 
