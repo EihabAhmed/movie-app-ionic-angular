@@ -9,8 +9,10 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./movie-details.page.scss'],
 })
 export class MovieDetailsPage implements OnInit {
-  movie: any = null;
+
   imageBaseUrl = environment.images;
+
+  movie: any = null;
 
   constructor(
     private route: ActivatedRoute,

@@ -10,9 +10,10 @@ import { environment } from 'src/environments/environment';
 })
 export class MoviesPage implements OnInit {
 
+  imageBaseUrl = environment.images;
+
   movies: any[] = [];
   currentPage = 1;
-  imageBaseUrl = environment.images;
 
   constructor(
     private movieService: MovieService,
@@ -47,7 +48,7 @@ export class MoviesPage implements OnInit {
     );
   }
 
-  loadMore(event: InfiniteScrollCustomEvent) {
+  loadMore(event: any/*InfiniteScrollCustomEvent*/) {
     this.currentPage++;
     this.loadMovies(event);
   }
